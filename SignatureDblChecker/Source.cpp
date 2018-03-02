@@ -67,7 +67,7 @@ int main()
 	{
 		output << doubles[x] << " " << amnt[x] << "\n";
 	}
-	output << "There were " << length << " amount of lines.";
+	output << "There were " << length << " lines.";
 
 	return 0;
 }
