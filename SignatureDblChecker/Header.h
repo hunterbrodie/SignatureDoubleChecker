@@ -7,10 +7,9 @@
 #define NOMINMAX
 #endif
 
-std::string cmndlg();
-int countlines(std::string filename);
+std::string comdlg();
 
-std::string cmndlg()
+std::string comdlg()
 {
 	char filename[MAX_PATH];
 
@@ -52,19 +51,7 @@ std::string cmndlg()
 		case FNERR_SUBCLASSFAILURE: std::cout << "FNERR_SUBCLASSFAILURE\n"; break;
 		default: std::cout << "You cancelled.\n";
 		}
-		std::string strfilename = std::string(filename);
-		return strfilename;
 	}
-}
-int countlines(std::string filename)
-{
-	int lines = 0;
-	std::string temp;
-	std::ifstream sig(filename);
-	while (!sig.eof()) {
-		std::getline(sig, temp);
-		lines++;
-	}
-	sig.close();
-	return lines;
+	std::string str(filename);
+	return str;
 }
